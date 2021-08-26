@@ -1,0 +1,194 @@
+$anchoMaximo: 100%;
+$alturaMaxima: 100%;
+$colorPrincipal: #E40C34;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#principalContainer{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url("/src/assets/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    #header{
+        display: flex;
+        width: $anchoMaximo;
+        height: 100px;
+        .place{
+            display: flex;
+            width: 50%;
+            height: $alturaMaxima;
+            align-items: center;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin-left: 10%;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: rgb(245, 237, 237);
+            margin-right: 10%;
+            .buttonsHeader{
+                display: flex;
+                height: 50%;
+                width: 30%;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                &:nth-child(5){
+                    background-color: $colorPrincipal;
+                }
+                &:hover{
+                    cursor: pointer;
+                    background-color: white;
+                    color: $colorPrincipal;
+                }
+            }
+            #burguer{
+                display: none;
+            }
+        }
+    }
+    #fieldText{
+        display: flex;
+        width: $anchoMaximo;
+        height: 70%;
+        justify-content: flex-start;
+        align-items: center;
+        .texto{
+            display: flex;
+            flex-flow: column;
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 10%;
+            color: white;
+            .textDText{
+                .buttonsText{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    width: 200px;
+                    background-color: $colorPrincipal;
+                    border-radius: 10px;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: #fff;
+                        color: $colorPrincipal;
+                    }
+                }
+                &:nth-child(1){
+                    font-size: 30px;
+                    color: whitesmoke
+                }
+                &:nth-child(2){
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    #photoGallery{
+        display: flex;
+        width: $anchoMaximo;
+        height: 19%;
+        align-items: center;
+        justify-content: flex-end;
+        #contPG{
+            display: flex;
+            width: 50%;
+            height: $alturaMaxima;
+            justify-content: space-around;
+            .cuadroPho{
+                width:40%;
+                height: 90%;
+                border-radius: 10px;
+                border: 5px solid red;
+                &:nth-child(1){
+                    background-image: url("/src/assets/2.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                &:nth-child(2){
+                    background-image: url("/src/assets/3.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1340px) {
+    #principalContainer{
+        #header{
+            .buttons{
+                justify-content: flex-end;
+                .buttonsHeader{
+                    display: none;
+                }
+                #burguer{
+                    display: flex;
+                    transition: 0.5s ease;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        #fieldText{
+            justify-content: center;
+            .texto{
+                align-items: center;
+                margin-left: 0;
+                .textDText{
+                    .buttonsText{
+                        width: 150px;
+                    }
+                    &:nth-child(1){
+                        font-size: 25px;
+                        color: whitesmoke
+                    }
+                    &:nth-child(2){
+                        font-weight: bold;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        #photoGallery{
+            #contPG{
+                .cuadroPho{
+                    &:nth-child(1){
+                        display: none;
+                    }
+                    &:nth-child(2){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

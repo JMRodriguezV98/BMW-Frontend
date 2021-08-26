@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#principalContainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/assets/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#principalContainer #header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+#principalContainer #header .place {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+}
+#principalContainer #header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 10%;
+}
+#principalContainer #header .buttons {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #f5eded;
+  margin-right: 10%;
+}
+#principalContainer #header .buttons .buttonsHeader {
+  display: flex;
+  height: 50%;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+#principalContainer #header .buttons .buttonsHeader:nth-child(5) {
+  background-color: #E40C34;
+}
+#principalContainer #header .buttons .buttonsHeader:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #E40C34;
+}
+#principalContainer #header .buttons #burguer {
+  display: none;
+}
+#principalContainer #fieldText {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  justify-content: flex-start;
+  align-items: center;
+}
+#principalContainer #fieldText .texto {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10%;
+  color: white;
+}
+#principalContainer #fieldText .texto .textDText .buttonsText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  background-color: #E40C34;
+  border-radius: 10px;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+#principalContainer #fieldText .texto .textDText .buttonsText:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #E40C34;
+}
+#principalContainer #fieldText .texto .textDText:nth-child(1) {
+  font-size: 30px;
+  color: whitesmoke;
+}
+#principalContainer #fieldText .texto .textDText:nth-child(2) {
+  font-weight: bold;
+  font-size: 25px;
+}
+#principalContainer #photoGallery {
+  display: flex;
+  width: 100%;
+  height: 19%;
+  align-items: center;
+  justify-content: flex-end;
+}
+#principalContainer #photoGallery #contPG {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+}
+#principalContainer #photoGallery #contPG .cuadroPho {
+  width: 40%;
+  height: 90%;
+  border-radius: 10px;
+  border: 5px solid red;
+}
+#principalContainer #photoGallery #contPG .cuadroPho:nth-child(1) {
+  background-image: url("/src/assets/2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#principalContainer #photoGallery #contPG .cuadroPho:nth-child(2) {
+  background-image: url("/src/assets/3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#principalContainer #photoGallery #contPG .cuadroPho:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1340px) {
+  #principalContainer #header .buttons {
+    justify-content: flex-end;
+  }
+  #principalContainer #header .buttons .buttonsHeader {
+    display: none;
+  }
+  #principalContainer #header .buttons #burguer {
+    display: flex;
+    transition: 0.5s ease;
+  }
+  #principalContainer #header .buttons #burguer:hover {
+    cursor: pointer;
+  }
+  #principalContainer #fieldText {
+    justify-content: center;
+  }
+  #principalContainer #fieldText .texto {
+    align-items: center;
+    margin-left: 0;
+  }
+  #principalContainer #fieldText .texto .textDText .buttonsText {
+    width: 150px;
+  }
+  #principalContainer #fieldText .texto .textDText:nth-child(1) {
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  #principalContainer #fieldText .texto .textDText:nth-child(2) {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  #principalContainer #photoGallery #contPG .cuadroPho:nth-child(1) {
+    display: none;
+  }
+  #principalContainer #photoGallery #contPG .cuadroPho:nth-child(2) {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
